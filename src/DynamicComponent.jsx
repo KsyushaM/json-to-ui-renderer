@@ -1,8 +1,8 @@
 import { componentsMap } from "./App"
 
-const DynamicComponentRenderer = ({ type }) => {
+const DynamicComponentRenderer = ({ type, ...delegated }) => {
   const DynamicComponent = componentsMap[type]
-  return <DynamicComponent />
+  return <DynamicComponent {...delegated} />
 }
 
 export default DynamicComponentRenderer
