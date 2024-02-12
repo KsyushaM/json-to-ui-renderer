@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       {uiData.views.map((node) => (
-        <DynamicComponentRenderer {...node} />
+        <DynamicComponentRenderer key={crypto.randomUUID()} {...node} />
       ))}
     </>
   )
