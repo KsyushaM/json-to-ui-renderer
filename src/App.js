@@ -18,9 +18,13 @@ export const componentsMap = {
 function App() {
   return (
     <>
-      {uiData.views.map((node) => (
-        <DynamicComponentRenderer key={crypto.randomUUID()} {...node} />
-      ))}
+      {uiData.views.map((node) => {
+        componentsMap[node.type] ? (
+          <DynamicComponentRenderer key={crypto.randomUUID()} {...node} />
+        ) : (
+          console.log(`Component ${node.type} has not been created yet`)
+        )
+      })}
     </>
   )
 }
