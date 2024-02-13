@@ -1,0 +1,9 @@
+.actionClass:hover {
+  color: var(--hover-color) !important;
+  background-color: var(--hover-bg-color) !important;
+}
+
+.actionClass:focus {
+  color: var(--focus-color) !important;
+  background-color: var(--focus-bg-color) !important;
+}

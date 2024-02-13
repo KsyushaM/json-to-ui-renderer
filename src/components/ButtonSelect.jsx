@@ -1,5 +1,11 @@
-const ButtonSelect = ({ style, data }) => (
-  <button style={style.webStyle}>{data.value}</button>
+const ButtonSelect = ({ data, styleName, actionClassName }) => (
+  <button
+    className={actionClassName}
+    style={styleName}
+    onClick={() => console.log(data.value)}
+  >
+    {data.value}
+  </button>
 )
 
 export default ButtonSelect

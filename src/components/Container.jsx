@@ -1,8 +1,8 @@
 import DynamicComponentRenderer from "../DynamicComponent"
 
-const Container = ({ style, children }) => {
+const Container = ({ actionClassName, styleName, children }) => {
   return (
-    <div style={style.webStyle}>
+    <div className={actionClassName} style={styleName}>
       {children.map((node) => (
         <DynamicComponentRenderer key={crypto.randomUUID()} {...node} />
       ))}
